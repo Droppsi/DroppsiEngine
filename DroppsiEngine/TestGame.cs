@@ -10,7 +10,7 @@ namespace DroppsiEngine
 {
     class TestGame : DroppsiEngine.Engine.DroppsiEngine
     {
-        public TestGame() : base(new Vector2D(1920, 1080), "Test")
+        public TestGame() : base(new Vector2D(512, 512), "Test")
         {
         }
         

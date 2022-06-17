@@ -23,16 +23,18 @@ namespace DroppsiEngine.Engine
     public abstract class DroppsiEngine
     {
         public Vector2D ScreenResolution = new Vector2D(512, 512);
-        private string Title = "DroppsiEngine (unstable/dev)";
-        private ScreenCanvas window = null;
+        private readonly string Title = "DroppsiEngine (unstable/dev)";
+        private readonly ScreenCanvas window = null;
 
         public DroppsiEngine(Vector2D ScreenResolution, string Title)
         {
             this.ScreenResolution = ScreenResolution;
             this.Title = Title;
-            window = new ScreenCanvas();
-            window.Size = new Size((int)this.ScreenResolution.X, (int)this.ScreenResolution.Y);
-            window.Text = this.Title;
+            window = new ScreenCanvas
+            {
+                Size = new Size((int)this.ScreenResolution.X, (int)this.ScreenResolution.Y),
+                Text = this.Title
+            };
             window.Paint += Renderer;
 
 
