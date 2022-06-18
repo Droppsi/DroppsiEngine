@@ -8,7 +8,7 @@ using DroppsiEngine.Engine;
 
 namespace DroppsiEngine
 {
-    class TestGame : DroppsiEngine.Engine.DroppsiEngine
+    class TestGame : Engine.DroppsiEngine
     {
         public TestGame() : base(new Vector2D(512, 512), "Test")
         {

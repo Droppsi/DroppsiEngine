@@ -39,14 +39,27 @@
     <Compile Include="Engine\DroppsiEngine.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Engine\Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Engine\Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Engine\Vector2D.cs" />
     <Compile Include="TestGame.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System" />
+    <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Engine\Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
