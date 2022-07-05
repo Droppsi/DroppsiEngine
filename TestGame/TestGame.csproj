@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{98C0083C-AC12-4824-BD0E-F6C964A4CBA8}</ProjectGuid>
+    <ProjectGuid>{CF719BD0-A63E-4DD9-8D05-0B8EB1A5E4E7}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>DroppsiEngine</RootNamespace>
-    <AssemblyName>DroppsiEngine</AssemblyName>
+    <RootNamespace>TestGame</RootNamespace>
+    <AssemblyName>TestGame</AssemblyName>
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -36,30 +36,13 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Program.cs" />
-    <Compile Include="Engine\Vector2D.cs" />
-    <Compile Include="Windows\MainWindow\MainWindow.xaml.cs">
-      <DependentUpon>MainWindow.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Windows\Shared\Themes\Colors.cs" />
+    <Compile Include="TestGame.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Reference Include="PresentationCore" />
-    <Reference Include="PresentationFramework" />
-    <Reference Include="System" />
-    <Reference Include="System.Data" />
-    <Reference Include="System.Drawing" />
-    <Reference Include="System.Windows.Forms" />
-    <Reference Include="System.Xaml" />
-    <Reference Include="System.Xml" />
-    <Reference Include="WindowsBase" />
+    <ProjectReference Include="..\DroppsiEngine\DroppsiEngine.csproj">
+      <Project>{98c0083c-ac12-4824-bd0e-f6c964a4cba8}</Project>
+      <Name>DroppsiEngine</Name>
+    </ProjectReference>
   </ItemGroup>
-  <ItemGroup>
-    <Page Include="Windows\MainWindow\MainWindow.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-  </ItemGroup>
-  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

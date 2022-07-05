@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace DroppsiEngine.Engine
+﻿namespace DroppsiEngine.Engine
 {
     public class Vector2D
     {
@@ -17,8 +11,8 @@ namespace DroppsiEngine.Engine
         }
         public Vector2D(float x, float y)
         {
-            this.X = x;
-            this.Y = y;
+            X = x;
+            Y = y;
         }
         public static Vector2D InIt()
         {

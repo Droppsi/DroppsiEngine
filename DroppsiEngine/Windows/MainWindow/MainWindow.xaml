@@ -1,0 +1,36 @@
+﻿<UserControl x:Class="DroppsiEngine.Windows.MainWindow.UserControl1"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:DroppsiEngine.Windows.MainWindow"
+             mc:Ignorable="d" 
+             d:DesignHeight="600" d:DesignWidth="920">
+    <Border Background="#1C1C1C">
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="200"/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="75"/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <TextBlock Text="DroppsiEngine"
+                       VerticalAlignment="Center"
+                       HorizontalAlignment="Left"
+                       Foreground="#525252"
+                       FontSize="28"
+                       Margin="8"/>
+            <StackPanel Grid.Row="1">
+                <RadioButton Content="New Project"
+                             Height="50"
+                             FontSize="18"
+                             Foreground="#525252 "
+                             Margin="12, 0, 0, 0"/>
+            </StackPanel>
+        </Grid>
+    </Border>
+    
+</UserControl>
