@@ -16,7 +16,7 @@ namespace DroppsiEngine.Windows.Shared.Themes
         Success     - #FF00F7
         Fail        - #FF6300
         Debug       - #FFFA00 
-        Rebase      - #0003FF
+        Release     - #0003FF
         Other       - #00FFE4
         */
         
