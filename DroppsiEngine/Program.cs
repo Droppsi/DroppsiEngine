@@ -8,22 +8,8 @@ namespace DroppsiEngine
     {
         public static void Main(string[] args)
         {
-            throw new NotImplementedException();
-            
+            var window = new Windows.MainWindow.MainWindow();        
             
         }
     }
 }
-
-
-/* COLORS
-----------------------------------------------------------------------------------
-Primary     - #FFFFFF
-Secondary   - #1C1C1C
-Tertiary    - #FF00D9
-Success     - #FF00F7
-Fail        - #FF6300
-Debug       - #FFFA00 
-Rebase      - #0003FF
-Other       - #00FFE4
-*/

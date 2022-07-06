@@ -41,6 +41,7 @@
     <Compile Include="Windows\MainWindow\MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Windows\Shared\DroppsiColor.cs" />
     <Compile Include="Windows\Shared\Themes\Colors.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -60,6 +61,5 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
   </ItemGroup>
-  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

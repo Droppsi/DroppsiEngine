@@ -24,10 +24,5 @@ namespace DroppsiEngine.Windows.MainWindow
         {
             InitializeComponent();
         }
-
-        private void InitializeComponent()
-        {
-            throw new NotImplementedException();
-        }
     }
 }
