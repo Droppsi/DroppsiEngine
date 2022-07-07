@@ -7,7 +7,7 @@
         public Vector2D()
         {
             X = InIt().X;
-            X = InIt().X;
+            Y = InIt().Y;
         }
         public Vector2D(float x, float y)
         {
