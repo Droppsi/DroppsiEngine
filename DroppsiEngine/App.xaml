@@ -7,7 +7,7 @@
     <Application.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
-                <ResourceDictionary Source="./Windows/Shared/Themes/MenuButtons.xaml"/>
+                <ResourceDictionary Source="Windows/Shared/Themes/MenuButtons.xaml"/>
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
     </Application.Resources>

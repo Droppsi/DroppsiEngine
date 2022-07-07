@@ -2,13 +2,13 @@
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
     <Style BasedOn="{StaticResource {x:Type ToggleButton}}"
            TargetType="{x:Type RadioButton}"
-           x:Key="NewProjectButton">
+           x:Key="MenuButton">
         <Style.Setters>
             <Setter Property="Template">
                 <Setter.Value>
                     <Grid VerticalAlignment="Stretch"
                           HorizontalAlignment="Stretch"
-                          Background="{TemplateBinding Backround}">
+                          Background="{Binding Backround}">
 
                         <TextBlock Text="Test"
                                    VerticalAlignment="Center"/>

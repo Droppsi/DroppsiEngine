@@ -18,7 +18,7 @@ namespace DroppsiEngine.Windows.MainWindow
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
-    public partial class MainWindow : UserControl
+    public partial class MainWindow
     {
         public MainWindow()
         {

@@ -8,8 +8,8 @@ namespace DroppsiEngine
     {
         public static void Main(string[] args)
         {
-            var window = new Windows.MainWindow.MainWindow();        
-            
+            var window = new Windows.MainWindow.MainWindow();
+            window.Show();
         }
     }
 }
