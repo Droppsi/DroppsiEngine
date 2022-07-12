@@ -50,12 +50,14 @@ namespace DroppsiEngine.Engine.Commands
 
         public void DeleteProject()
         {
-            throw new NotImplementedException();
+            ProjectFile project = new ProjectFile();
+            project.DeleteProject();
         }
 
         public void SaveProject(ProjectSettings projectSettings, ProjectFile existingfile)
         {
-            throw new NotImplementedException();
+            ProjectFile project = new ProjectFile();
+            project.SaveProject();
         }
     }
 }
