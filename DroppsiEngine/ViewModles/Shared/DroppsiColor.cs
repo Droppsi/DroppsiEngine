@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DroppsiEngine.Windows.Shared
+namespace DroppsiEngine.ViewModles.Shared
 {
     public class DroppsiColor
     {
@@ -12,7 +12,7 @@ namespace DroppsiEngine.Windows.Shared
         {
             if (value.StartsWith("#"))
             {
-                value = value.Substring(1);
+                value = value[1..];
             }
             else 
             {

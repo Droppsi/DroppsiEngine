@@ -9,13 +9,14 @@
                 <ControlTemplate TargetType="{x:Type RadioButton}">
                     <Border 
                         Background="{TemplateBinding Background}"
-                        Width="{TemplateBinding Width}" Height="{TemplateBinding Height}"
-                        CornerRadius="4"
-                        >
+                        Width="{TemplateBinding Width}" 
+                        Height="{TemplateBinding Height}"
+                        CornerRadius="15">
                         <TextBlock 
                             Text="{TemplateBinding Content}" 
-                            VerticalAlignment="Center" HorizontalAlignment="Center"
-                            />
+                            VerticalAlignment="Center"
+                            HorizontalAlignment="Center"/>
+                        
                     </Border>
 
                     <ControlTemplate.Triggers>

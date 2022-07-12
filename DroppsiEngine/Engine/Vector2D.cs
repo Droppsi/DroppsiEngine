@@ -19,5 +19,4 @@
             return new Vector2D();
         }
     }
-    
 }
