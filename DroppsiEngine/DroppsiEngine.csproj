@@ -18,6 +18,11 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="MVVM\Models\" />
-    <Folder Include="MVVM\ViewModels\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Page Update="Themes\SaveButtons.xaml">
+      <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
+      <SubType>Designer</SubType>
+    </Page>
   </ItemGroup>
 </Project>

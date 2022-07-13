@@ -13,14 +13,14 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace DroppsiEngine.ViewModles.Modals
+namespace DroppsiEngine.MVVM.Views
 {
     /// <summary>
-    /// Interaction logic for NewProjectVM.xaml
+    /// Interaction logic for NewProjectView.xaml
     /// </summary>
-    public partial class NewProjectVM : Page
+    public partial class NewProjectView : UserControl
     {
-        public NewProjectVM()
+        public NewProjectView()
         {
             InitializeComponent();
         }
