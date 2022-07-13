@@ -7,7 +7,8 @@
     <Application.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
-                <ResourceDictionary Source="ViewModles/Shared/Themes/MenuButtons.xaml"/>
+                <ResourceDictionary Source="Themes/MenuButtons.xaml"/>
+                <ResourceDictionary Source="Themes/ProjectPreview.xaml"/>
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
     </Application.Resources>

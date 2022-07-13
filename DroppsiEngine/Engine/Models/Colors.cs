@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DroppsiEngine.ViewModles.Shared.Themes
+namespace DroppsiEngine.Engine.Models
 {
     public class Colors
     {
@@ -19,6 +19,6 @@ namespace DroppsiEngine.ViewModles.Shared.Themes
         Release     - #0003FF
         Other       - #00FFE4
         */
-        
+
     }
 }

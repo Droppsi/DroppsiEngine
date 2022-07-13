@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DroppsiEngine.ViewModles.Shared
+namespace DroppsiEngine.Engine.Misc
 {
     public class ObservableObject : INotifyPropertyChanged
     {

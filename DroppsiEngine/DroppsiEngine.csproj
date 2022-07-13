@@ -16,4 +16,8 @@
   <ItemGroup>
     <Page Include="App.xaml" />
   </ItemGroup>
+  <ItemGroup>
+    <Folder Include="MVVM\Models\" />
+    <Folder Include="MVVM\ViewModels\" />
+  </ItemGroup>
 </Project>

@@ -16,7 +16,7 @@ using System.Windows.Shapes;
 using DroppsiEngine.Engine.Models;
 
 
-namespace DroppsiEngine.ViewModles.MainWindow
+namespace DroppsiEngine.MVVM.MainWindow
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml

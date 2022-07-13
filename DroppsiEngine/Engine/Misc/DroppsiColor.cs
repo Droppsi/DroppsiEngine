@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DroppsiEngine.ViewModles.Shared
+namespace DroppsiEngine.Engine.Misc
 {
     public class DroppsiColor
     {
@@ -14,13 +14,13 @@ namespace DroppsiEngine.ViewModles.Shared
             {
                 value = value[1..];
             }
-            else 
+            else
             {
                 throw new NotImplementedException("Only hex Values are allowed");
             }
 
-            
-            switch(value.Length)
+
+            switch (value.Length)
             {
                 case 3:
                     value = new string(new char[8] { value[0], value[0], value[1], value[1], value[2], value[2], 'F', 'F' });
@@ -36,9 +36,9 @@ namespace DroppsiEngine.ViewModles.Shared
                     break;
                 default:
                     throw new ArgumentException("not a valid color", nameof(value));
-            
+
             }
-            
+
         }
     }
 }

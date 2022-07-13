@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Input;
 
-namespace DroppsiEngine.ViewModles.Shared
+namespace DroppsiEngine.Engine.Misc
 {
     public class RelayCommand : ICommand
     {
