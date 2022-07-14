@@ -13,6 +13,7 @@ namespace DroppsiEngine.MVVM.ViewModels
     public class MainViewModel : ObservableObject
     {
         public RelayCommand ExitCommand { get; set; }
+        public RelayCommand DefaultMainVMCommand { get; set; }
         public RelayCommand NewProjectVMCommand { get; set; }
         public NewProjectViewModel NewProjectVM { get; set; }
 
@@ -35,6 +36,10 @@ namespace DroppsiEngine.MVVM.ViewModels
             NewProjectVMCommand = new RelayCommand((o) =>
             {
                 CurrentView = NewProjectVM;
+            });
+            DefaultMainVMCommand = new RelayCommand((o) =>
+            {
+                CurrentView = DefaultMainVMCommand;
             });
             ExitCommand = new RelayCommand((o) =>
             {
