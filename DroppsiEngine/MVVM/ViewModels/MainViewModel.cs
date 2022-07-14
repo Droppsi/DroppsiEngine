@@ -36,8 +36,10 @@ namespace DroppsiEngine.MVVM.ViewModels
             {
                 CurrentView = NewProjectVM;
             });
-            CloseWindowCommand closeWindowCommand = new();
-            this.ExitCommand = new RelayCommand(closeWindowCommand);
+            ExitCommand = new RelayCommand((o) =>
+            {
+                Application.Current.MainWindow.Close();
+            });
         }
     }
 }

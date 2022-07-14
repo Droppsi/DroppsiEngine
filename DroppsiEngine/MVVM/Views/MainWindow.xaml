@@ -40,7 +40,8 @@
                          Margin="12, 12, 12, 12"
                          VerticalContentAlignment="Bottom"
                          Style="{StaticResource MenuButtons}"
-                         Command="{Binding ExitCommand}"/>
+                         Command="{Binding ExitCommand}"
+                         CommandParameter="{Binding RelativeSource={RelativeSource AncestorType={x:Type Window}}}"/>
             <StackPanel Grid.Row="1">
                 <TextBox Style="{StaticResource SearchBox}" 
                          Margin="12, 0, 12, 0"
@@ -53,7 +54,7 @@
                              Foreground="White"
                              Margin="12, 12, 12, 0"
                              Style="{StaticResource MenuButtons}"
-                             Command="{Binding ExitCommand}"/>
+                             Command="{Binding NewProjectVM}"/>
                 
             </StackPanel>
             <ContentControl Grid.Row="1"

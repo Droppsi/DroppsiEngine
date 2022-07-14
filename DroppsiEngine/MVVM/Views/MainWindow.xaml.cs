@@ -22,7 +22,7 @@ namespace DroppsiEngine.MVVM.MainWindow
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
-    public partial class MainWindow : Window, ICloseable
+    public partial class MainWindow : Window
     {
         public MainWindow()
         {
