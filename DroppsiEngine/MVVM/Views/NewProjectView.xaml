@@ -12,7 +12,7 @@
                    FontSize="28"
                    HorizontalAlignment="Left"
                    Margin="10, 10, 10, 20"/>
-        <ListView Foreground="Red"
+        <ListView Foreground="White"
                   Background="Transparent">
             
         </ListView>

@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Input;
 
-namespace DroppsiEngine.Engine.Misc
+namespace DroppsiEngine.Engine.Commands
 {
     public class RelayCommand : ICommand
     {
@@ -22,6 +22,24 @@ namespace DroppsiEngine.Engine.Misc
         {
             _execute = execute;
             _canExecute = canExecute;
+        }
+
+        public RelayCommand(Action execute, Func<bool> canExecute)
+        {
+            _execute = (x) => { execute(); };
+            _canExecute = (x) => { return true; };
+        }
+
+        public RelayCommand(Action<object> execute)
+        {
+            _execute = execute;
+            _canExecute = (x) => { return true; } ;
+        }
+
+        public RelayCommand(Action execute)
+        {
+            _execute = (x) => { execute(); };
+            _canExecute = (x) => { return true; };
         }
 
         public bool CanExecute(object parameter)

@@ -14,14 +14,15 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using DroppsiEngine.Engine.Models;
-
+using DroppsiEngine.MVVM.ViewModels;
+using DroppsiEngine.Engine.Interfaces;
 
 namespace DroppsiEngine.MVVM.MainWindow
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
-    public partial class MainWindow
+    public partial class MainWindow : Window, ICloseable
     {
         public MainWindow()
         {

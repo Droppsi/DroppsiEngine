@@ -3,12 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using DroppsiEngine.Engine.Misc;
 
-namespace DroppsiEngine.MVVM.ViewModels
+namespace DroppsiEngine.Engine.Interfaces
 {
-    public class NewProjectViewModel : ObservableObject
+    public interface ICloseable
     {
-
+        void Close();
     }
 }

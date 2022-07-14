@@ -11,7 +11,7 @@
                         Background="{TemplateBinding Background}"
                         Width="{TemplateBinding Width}" 
                         Height="{TemplateBinding Height}"
-                        CornerRadius="0">
+                        CornerRadius="10">
                         <TextBlock 
                             Text="{TemplateBinding Content}" 
                             VerticalAlignment="Center"
