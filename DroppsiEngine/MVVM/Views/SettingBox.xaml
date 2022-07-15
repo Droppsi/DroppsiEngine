@@ -6,7 +6,7 @@
              xmlns:local="clr-namespace:DroppsiEngine.MVVM.Views"
              mc:Ignorable="d" 
              d:DesignHeight="350" d:DesignWidth="575"
-             Background="AntiqueWhite">
+             Background="#FF1D1D1D">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition/>
@@ -22,10 +22,12 @@
         <TextBlock Grid.Row="0"
                    Grid.Column="0"
                    Text="Settings"
+                   Foreground="White"
                    />
         <TextBlock Grid.Row="1"
                    Grid.Column="3"
                    Text="Set to"
+                   Foreground="White"
                    />
         <RadioButton Grid.Row="2"
                      Grid.Column="2"

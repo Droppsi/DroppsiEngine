@@ -7,7 +7,7 @@ using DroppsiEngine.Engine.Misc;
 
 namespace DroppsiEngine.MVVM.ViewModels
 {
-    public class NewProjectViewModel : ObservableObject
+    public class DefaultMainViewModel : ObservableObject
     {
     }
 }

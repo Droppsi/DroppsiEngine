@@ -19,6 +19,12 @@
             <DataTemplate DataType="{x:Type viewModels:NewProjectViewModel}">
                 <views:NewProjectView/>
             </DataTemplate>
+            <DataTemplate DataType="{x:Type viewModels:DefaultMainViewModel}">
+                <views:DefaultMainView/>
+            </DataTemplate>
+            <DataTemplate DataType="{x:Type viewModels:MainViewModel}">
+                <views:/>
+            </DataTemplate>
         </ResourceDictionary>
     </Application.Resources>
 </Application>

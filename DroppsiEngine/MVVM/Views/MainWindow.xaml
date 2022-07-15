@@ -7,8 +7,9 @@
         mc:Ignorable="d" 
         d:DesignHeight="600" d:DesignWidth="920"
         WindowStyle="None"
-        Background="Transparent"
+        Background="#FF1C1C1C"
         AllowsTransparency="True">
+    
     <Window.DataContext>
         <vms:MainViewModel/>
     </Window.DataContext>
