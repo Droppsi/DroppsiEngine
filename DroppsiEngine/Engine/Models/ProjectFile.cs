@@ -7,6 +7,7 @@ using DroppsiEngine.Engine.Commands;
 
 namespace DroppsiEngine.Engine.Models
 {
+    [Serializable]
     public class ProjectFile
     {
         public string Name { get; set; }

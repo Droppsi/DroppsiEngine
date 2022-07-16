@@ -13,51 +13,34 @@ namespace DroppsiEngine.Engine.Commands
 {
     public class EditProjectCommand : IEditProject
     {
-        public void ChangeProjectDescription(string description)
+        public void ChangeProjectDescription(string description, ProjectFile existingfile)
         {
-            ProjectFile project = new ProjectFile();
-            project.Description = description;
-            project.SaveProject();
+            existingfile.Description = description;
+            existingfile.SaveProject();
         }
 
-        public void ChangeProjectName(string name)
+        public void ChangeProjectName(string name, ProjectFile existingfile)
         {
-            ProjectFile project = new ProjectFile();
-            project.Name = name;
-            project.SaveProject();
+            existingfile.Name = name;
+            existingfile.SaveProject();
         }
 
-        public void ChangeProjectPath(string path)
+        public void ChangeProjectPath(string path, ProjectFile existingfile)
         {
-            ProjectFile project = new ProjectFile();
-            project.ProjectDir = path;
-            project.SaveProject();
+            existingfile.PreviewPicturePath = path;
+            existingfile.SaveProject();
         }
 
-        public void ChangeProjectSettings(ProjectSettings settings)
+        public void ChangeProjectSettings(ProjectSettings settings, ProjectFile existingfile)
         {
-            ProjectFile project = new ProjectFile();
-            project.ProjectSettings = settings;
-            project.SaveProject();
+            existingfile.ProjectSettings = settings;
+            existingfile.SaveProject();
         }
 
-        public void ChangeProjectVersion(string version)
+        public void ChangeProjectVersion(string version, ProjectFile existingfile)
         {
-            ProjectFile project = new ProjectFile();
-            project.ProjectVersion = version;
-            project.SaveProject();
-        }
-
-        public void DeleteProject()
-        {
-            ProjectFile project = new ProjectFile();
-            project.DeleteProject();
-        }
-
-        public void SaveProject(ProjectSettings projectSettings, ProjectFile existingfile)
-        {
-            ProjectFile project = new ProjectFile();
-            project.SaveProject();
+            existingfile.ProjectVersion = version;
+            existingfile.SaveProject();
         }
     }
 }

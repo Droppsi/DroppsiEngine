@@ -9,12 +9,15 @@ namespace DroppsiEngine.Engine.Interfaces
 {
     public interface IEditProject
     {
-        public void ChangeProjectPath(string path);
-        public void ChangeProjectName(string name);
-        public void ChangeProjectDescription(string description);
-        public void ChangeProjectVersion(string version);
-        public void ChangeProjectSettings(ProjectSettings settings);
-        public void DeleteProject();
-        public void SaveProject(ProjectSettings settings, ProjectFile existingfile);
+        public void ChangeProjectPath(string path, ProjectFile existingfile);
+
+        public void ChangeProjectName(string name, ProjectFile existingfile);
+
+        public void ChangeProjectDescription(string description, ProjectFile existingfile);
+
+        public void ChangeProjectVersion(string version, ProjectFile existingfile);
+
+        public void ChangeProjectSettings(ProjectSettings settings, ProjectFile existingfile);
+
     }
 }
