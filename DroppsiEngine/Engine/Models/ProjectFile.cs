@@ -20,9 +20,13 @@ namespace DroppsiEngine.Engine.Models
 
         public bool SaveProject()
         {
-            SaveProjectCommand saveProjectCommand = new SaveProjectCommand();
-            saveProjectCommand.Save(this);
-            if (ProjectSettings != null)
+            SaveProjectCommand saveProjectCommand = new();
+            if (saveProjectCommand.Save(this))
+            {
+                return true;
+            }
+            return false;
+            
         }
         public bool DeleteProject()
         {
