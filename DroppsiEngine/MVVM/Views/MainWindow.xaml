@@ -7,7 +7,7 @@
         mc:Ignorable="d" 
         d:DesignHeight="600" d:DesignWidth="920"
         WindowStyle="None"
-        Background="#FF1C1C1C"
+        Background="Transparent"
         AllowsTransparency="True">
     
     <Window.DataContext>
@@ -25,12 +25,13 @@
                 <RowDefinition Height="75"/>
                 <RowDefinition/>
             </Grid.RowDefinitions>
-            <TextBlock Text="DroppsiEngine"
-                       VerticalAlignment="Center"
-                       HorizontalAlignment="Left"
-                       Foreground="White"
-                       FontSize="28"
-                       Margin="8"/>
+            <RadioButton Content="DroppsiEngine"
+                         Style="{StaticResource ClickableTextBox}"
+                         Margin="8"
+                         FontSize="28"
+                         VerticalAlignment="Center"
+                         HorizontalAlignment="Left"
+                         Command="{Binding DefaultMainVMCommand}"/>
             <RadioButton Content="Exit"
                          Grid.Row="1"
                          Grid.Column="0"
@@ -48,15 +49,15 @@
                          Margin="12, 0, 12, 0"
                          Height="35"
                          Foreground="White"/>
-                
+
                 <RadioButton Content="New Project"
                              Height="50"
                              FontSize="18"
                              Foreground="White"
                              Margin="12, 12, 12, 0"
                              Style="{StaticResource MenuButtons}"
-                             Command="{Binding NewProjectVM}"/>
-                
+                             Command="{Binding NewProjectVMCommand}"/>
+
             </StackPanel>
             <ContentControl Grid.Row="1"
                             Grid.Column="1"

@@ -9,5 +9,6 @@ namespace DroppsiEngine.MVVM.ViewModels
 {
     public class NewProjectViewModel : ObservableObject
     {
+
     }
 }

@@ -15,13 +15,17 @@ namespace DroppsiEngine.MVVM.ViewModels
         public RelayCommand ExitCommand { get; set; }
         public RelayCommand DefaultMainVMCommand { get; set; }
         public RelayCommand NewProjectVMCommand { get; set; }
+
         public NewProjectViewModel NewProjectVM { get; set; }
         public DefaultMainViewModel DefaultMainVM { get; set; }
 
         private object _currentView;
         public object CurrentView
         {
-            get { return _currentView; }
+            get
+            {
+                return _currentView; 
+            }
             set
             {
                 _currentView = value;
