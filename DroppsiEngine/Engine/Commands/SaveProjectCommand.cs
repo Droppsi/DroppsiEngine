@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DroppsiEngine.Engine.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,11 +9,7 @@ namespace DroppsiEngine.Engine.Commands
 {
     public class SaveProjectCommand
     {
-        public SaveProjectCommand Command(string ProjectDir)
-        {
-            throw new NotImplementedException();
-        }
-        public bool SaveProject(string path)
+        public bool Save(ProjectFile projectFile)
         {
             throw new NotImplementedException();
         }

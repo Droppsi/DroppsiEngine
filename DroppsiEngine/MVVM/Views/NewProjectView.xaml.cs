@@ -18,5 +18,10 @@ namespace DroppsiEngine.MVVM.Views
         {
             InitializeComponent();
         }
+
+        private void RadioButton_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

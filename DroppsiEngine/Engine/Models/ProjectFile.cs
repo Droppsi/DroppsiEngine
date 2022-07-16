@@ -16,9 +16,13 @@ namespace DroppsiEngine.Engine.Models
         public string ProjectVersion { get; set; }
         public DateTime LastOpened { get; set; }
         public ProjectSettings ProjectSettings { get; set; }
+
+
         public bool SaveProject()
         {
-            throw new NotImplementedException();   
+            SaveProjectCommand saveProjectCommand = new SaveProjectCommand();
+            saveProjectCommand.Save(this);
+            if (ProjectSettings != null)
         }
         public bool DeleteProject()
         {

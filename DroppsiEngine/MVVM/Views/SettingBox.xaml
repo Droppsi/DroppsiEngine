@@ -5,36 +5,25 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:DroppsiEngine.MVVM.Views"
              mc:Ignorable="d" 
-             d:DesignHeight="350" d:DesignWidth="575"
+             d:DesignHeight="150" d:DesignWidth="775"
              Background="#FF1D1D1D">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition/>
-            <RowDefinition/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
+            <ColumnDefinition/>
         </Grid.ColumnDefinitions>
 
-        <TextBox Grid.Row="0"
-                 Grid.Column="0"
+        <TextBox Grid.Column="0"
                  Foreground="White"
                  Style="{StaticResource SettingsTextBox}"
                  Text="Setting 1"/>
-        <Grid Grid.Row="1">
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition/>
-                <ColumnDefinition/>
-            </Grid.ColumnDefinitions>
-            <TextBox Grid.Row="1"
-                     Grid.Column="0"
-                     Text="Set to"
-                     Style="{StaticResource SettingsTextBox}"/>
-            <TextBox Grid.Row="1"
-                     Grid.Column="3"
-                     Text="SettingChoice"
-                     Style="{StaticResource SettingsTextBox}"/>
-        </Grid>
-       
+
+        <TextBox Grid.Column="1"
+                 Text="SettingChoice"
+                 Style="{StaticResource SettingsTextBox}"/>
+
     </Grid>
 </UserControl>
