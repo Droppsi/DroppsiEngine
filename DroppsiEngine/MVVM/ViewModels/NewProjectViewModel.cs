@@ -61,10 +61,10 @@ namespace DroppsiEngine.MVVM.ViewModels
             }
         }
 
-        private string ProjectNameBind { get; set; }
-        private string ProjectDescriptionBind { get; set; }
-        private string PreviewPicturePathBind { get; set; }
-        private string ProjectDirBind { get; set; }
+        private string ProjectNameBind;
+        private string ProjectDescriptionBind;
+        private string PreviewPicturePathBind;
+        private string ProjectDirBind;
 
         public NewProjectViewModel()
         {
@@ -88,5 +88,7 @@ namespace DroppsiEngine.MVVM.ViewModels
                 saveProject.Save(projectFile);
             });
         }
+
+        public ICollection<ProjectSettings> ProjectSettingsCollection;
     }
 }
