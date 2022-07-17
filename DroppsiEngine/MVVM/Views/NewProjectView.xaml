@@ -6,26 +6,22 @@
              xmlns:local="clr-namespace:DroppsiEngine.MVVM.Views"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
-    <StackPanel>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="75"/>
+            <RowDefinition />
+            <RowDefinition Height="75"/>
+        </Grid.RowDefinitions>
         <TextBlock Text="New Project"
                    Foreground="White"
                    FontSize="28"
                    HorizontalAlignment="Left"
                    Margin="10, 10, 10, 20"/>
-        <ListView Foreground="White"
-                  Background="Transparent" 
-                  d:ItemsSource="{d:SampleData ItemCount=3}"
-                  MaxHeight="383">
-            <ListView.ItemTemplate>
-                <DataTemplate x:Name="SettingsDataTemplate">
-                    <StackPanel CanHorizontallyScroll="False"
-                                CanVerticallyScroll="False">
-                        <local:SettingBox/>
-                    </StackPanel>
-                </DataTemplate>
-            </ListView.ItemTemplate>
-        </ListView>
-        <RadioButton Content="Exit"
+
+        
+        
+        <RadioButton Content="Create Project"
+                     Grid.Row="2"
                      VerticalAlignment="Bottom"
                      HorizontalAlignment="Right"
                      Height="50"
@@ -34,8 +30,9 @@
                      Foreground="White"
                      Margin="12, 12, 12, 12"
                      VerticalContentAlignment="Bottom"
-                     Style="{StaticResource MenuButtons}"/>
+                     Style="{StaticResource MenuButtons}"
+                     Command="{Binding CreateProjectCommand}"/>
 
-    </StackPanel>
+    </Grid>
     
 </UserControl>

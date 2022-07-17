@@ -16,7 +16,7 @@ namespace DroppsiEngine.Engine.Commands
             {
                 return false;
             }
-            string[] fileList = Directory.GetFiles(projectFile.ProjectDir, ".droppsiproject");
+            string[] fileList = Directory.GetFiles(projectFile.ProjectSettings.ProjectDir, ".droppsiproject");
             foreach (string file in fileList)
             {
                 File.Delete(file);

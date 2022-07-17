@@ -15,19 +15,19 @@ namespace DroppsiEngine.Engine.Commands
     {
         public void ChangeProjectDescription(string description, ProjectFile existingfile)
         {
-            existingfile.Description = description;
+            existingfile.ProjectSettings.Description = description;
             existingfile.SaveProject();
         }
 
         public void ChangeProjectName(string name, ProjectFile existingfile)
         {
-            existingfile.Name = name;
+            existingfile.ProjectSettings.Name = name;
             existingfile.SaveProject();
         }
 
         public void ChangeProjectPath(string path, ProjectFile existingfile)
         {
-            existingfile.PreviewPicturePath = path;
+            existingfile.ProjectSettings.PreviewPicturePath = path;
             existingfile.SaveProject();
         }
 
@@ -39,7 +39,7 @@ namespace DroppsiEngine.Engine.Commands
 
         public void ChangeProjectVersion(string version, ProjectFile existingfile)
         {
-            existingfile.ProjectVersion = version;
+            existingfile.ProjectSettings.ProjectVersion = version;
             existingfile.SaveProject();
         }
     }

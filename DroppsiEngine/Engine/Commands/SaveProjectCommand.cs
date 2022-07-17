@@ -15,7 +15,7 @@ namespace DroppsiEngine.Engine.Commands
         public bool Save(ProjectFile projectFile)
         {
             var xmlWriter = new XmlSerializer(typeof(ProjectFile));
-            using (var writer = new StreamWriter(@$"{projectFile.ProjectDir}"))
+            using (var writer = new StreamWriter(@$"{projectFile.ProjectSettings.ProjectDir}"))
             {
                 xmlWriter.Serialize(writer, projectFile);
             }

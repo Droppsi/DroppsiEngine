@@ -7,12 +7,18 @@
                 <ControlTemplate TargetType="{x:Type TextBox}">
                     <Border CornerRadius="5"
                             Background="#292929"
-                            MinHeight="55"
-                            MinWidth="150"
+                            MinHeight="70"
+                            MinWidth="180"
                             Margin="10">
                         <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="25"/>
+                                <RowDefinition Height="25"/>
+                            </Grid.RowDefinitions>
                             <Rectangle StrokeThickness="1"/>
                             <TextBox Margin="1"
+                                     Grid.Row="0"
+                                     IsReadOnly="True"
                                      Text="{TemplateBinding Text}"
                                      BorderThickness="0"
                                      Background="Transparent"
@@ -21,6 +27,8 @@
                                      Foreground="#CFCFCF"
                                      x:Name="SettingsTextBox"/>
                             <TextBox Margin="1"
+                                     Grid.Row="1"
+                                     IsReadOnly="False"
                                      Text="{TemplateBinding Text}"
                                      BorderThickness="0"
                                      Background="Transparent"

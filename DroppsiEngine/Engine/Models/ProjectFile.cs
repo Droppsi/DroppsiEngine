@@ -10,12 +10,7 @@ namespace DroppsiEngine.Engine.Models
     [Serializable]
     public class ProjectFile
     {
-        public string Name { get; set; }
-        public string Description { get; set; }
-        public string PreviewPicturePath { get; set; }
-        public string ProjectDir { get; set; }
-        public string ProjectVersion { get; set; }
-        public DateTime LastOpened { get; set; }
+        
         public ProjectSettings ProjectSettings { get; set; }
 
 

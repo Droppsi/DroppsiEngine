@@ -8,10 +8,12 @@ namespace DroppsiEngine.Engine.Models
 {
     public class ProjectSettings
     {
-        public string ProjectName { get; set; }
+        public string Name { get; set; }
+        public string Description { get; set; }
+        public string PreviewPicturePath { get; set; }
+        public string ProjectDir { get; set; }
         public string ProjectVersion { get; set; }
-        public string ProjectPreviewPath { get; set; }
-        public string OutputFile { get; set; }
-        public HashCode ProjectHash { get; set; }
+        public DateTime LastOpened { get; set; }
+        public DateTime CreateTime { get; set; }
     }
 }

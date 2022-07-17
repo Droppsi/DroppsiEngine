@@ -17,9 +17,6 @@
     <Page Include="App.xaml" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="MVVM\Models\" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="..\.editorconfig" Link=".editorconfig" />
   </ItemGroup>
   <ItemGroup>
