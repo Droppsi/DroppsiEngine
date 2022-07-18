@@ -26,7 +26,9 @@ namespace DroppsiEngine.Engine.Models
         }
         public bool DeleteProject()
         {
-            throw new NotImplementedException();
+            DeleteProjectCommand deleteProjectCommand = new();
+            deleteProjectCommand.DeleteProject(this);
+            return true;
         }
     }
 }

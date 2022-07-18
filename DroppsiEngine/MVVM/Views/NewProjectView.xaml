@@ -11,26 +11,32 @@
         <views:NewProjectViewModel/>
     </UserControl.DataContext>
     <Grid>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="75"/>
-            <RowDefinition />
-            <RowDefinition Height="75"/>
-        </Grid.RowDefinitions>
-        <TextBlock Text="New Project"
+	   <Grid.RowDefinitions>
+		  <RowDefinition Height="75"/>
+		  <RowDefinition />
+		  <RowDefinition Height="75"/>
+	   </Grid.RowDefinitions>
+	   <TextBlock Text="New Project"
                    Foreground="White"
                    FontSize="28"
                    HorizontalAlignment="Left"
                    Margin="10, 10, 10, 20"/>
 
-        <ListView Grid.Row="1"
-                  Background="Transparent"
-                  Foreground="Transparent"
-                  BorderThickness="0"
-                  ItemsSource="{d:SampleData ItemCount=3}">
+	   <ScrollViewer Grid.Row="1"
+                      Margin="0"
+                      VerticalScrollBarVisibility="Auto"
+                      HorizontalAlignment="Left"
+                      VerticalAlignment="Top">
+		  <ItemsControl ItemsSource="{Binding projectSettingsTest}">
+			 <ItemsControl.ItemTemplate>
+				<DataTemplate>
+				    <local:SettingBox/>
+				</DataTemplate>
+			 </ItemsControl.ItemTemplate>
+		  </ItemsControl>
+	   </ScrollViewer>
 
-        </ListView>
-
-        <RadioButton Content="Create Project"
+	   <RadioButton Content="Create Project"
                      Grid.Row="2"
                      VerticalAlignment="Bottom"
                      HorizontalAlignment="Right"
@@ -44,5 +50,4 @@
                      Command="{Binding CreateProjectCommand}"/>
 
     </Grid>
-    
 </UserControl>

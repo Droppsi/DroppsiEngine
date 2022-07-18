@@ -12,12 +12,26 @@ namespace DroppsiEngine.Engine.Commands
 {
     public class SaveProjectCommand
     {
+        public bool Save(ProjectSettings projectSettings)
+        {
+		  ProjectFile projectFile = new()
+		  {
+			 ProjectSettings = projectSettings
+		  };
+
+		  var xmlWriter = new XmlSerializer(typeof(ProjectFile));
+            using (var writer = new StreamWriter(@$"{projectFile.ProjectSettings.ProjectDir}"))
+            {
+                xmlWriter.Serialize(writer, projectFile.ProjectSettings);
+            }
+            return true;
+        }
         public bool Save(ProjectFile projectFile)
         {
             var xmlWriter = new XmlSerializer(typeof(ProjectFile));
             using (var writer = new StreamWriter(@$"{projectFile.ProjectSettings.ProjectDir}"))
             {
-                xmlWriter.Serialize(writer, projectFile);
+                xmlWriter.Serialize(writer, projectFile.ProjectSettings);
             }
             return true;
         }

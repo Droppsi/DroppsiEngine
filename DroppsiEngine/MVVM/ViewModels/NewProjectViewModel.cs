@@ -1,5 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -70,25 +70,38 @@ namespace DroppsiEngine.MVVM.ViewModels
         {
             CreateProjectCommand = new RelayCommand((o) =>
             {
+                
+                ProjectSettings projectSettings = new()
+                {
+                    PreviewPicturePath = PreviewPicturePathBind,
+                    ProjectDir = ProjectDirBind,
+                    ProjectVersion = "0.0.1",
+                    Name = ProjectNameBind,
+                    Description = ProjectDescriptionBind,
+                    LastOpened = DateTime.Now,
+                    CreateTime = DateTime.Now
+                };
                 ProjectFile projectFile = new()
                 {
-                    ProjectSettings = new ProjectSettings()
-                    {
-                        PreviewPicturePath = PreviewPicturePathBind,
-                        ProjectDir = ProjectDirBind,
-                        ProjectVersion = "0.0.1",
-                        Name = ProjectNameBind,
-                        Description = ProjectDescriptionBind,
-                        LastOpened = DateTime.Now,
-                        CreateTime = DateTime.Now
-                    },
+                    ProjectSettings = projectSettings,
                 };
 
                 SaveProjectCommand saveProject = new();
-                saveProject.Save(projectFile);
+                saveProject.Save(projectSettings);
             });
-        }
 
-        public ICollection<ProjectSettings> ProjectSettingsCollection;
+		  ProjectSettings projectSettings = new()
+		  {
+			 Name = "DefaultName",
+			 Description = "New DroppsiEngine Project",
+			 PreviewPicturePath = "D:/dev/",
+			 ProjectDir = "D:/dev/",
+			 ProjectVersion = "0.0.1",
+			 CreateTime = DateTime.Now,
+			 LastOpened = DateTime.Now,
+		  };           
+	   }
+
+        public ObservableCollection<string> projectSettingsTest;
     }
 }
