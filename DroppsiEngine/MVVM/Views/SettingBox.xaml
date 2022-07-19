@@ -5,24 +5,41 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:DroppsiEngine.MVVM.Views"
              mc:Ignorable="d"
-             d:DesignHeight="450" d:DesignWidth="400"
-             Background="#FF1D1D1D">
-    <Grid>
-        <Grid.RowDefinitions>
-            <RowDefinition/>
-            <RowDefinition/>
-        </Grid.RowDefinitions>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition/>
-        </Grid.ColumnDefinitions>
+             d:DesignHeight="100" d:DesignWidth="900"
+             Background="#FF1D1D1D"
+		   Margin="10">
+    <Border Background="#292929"
+		  CornerRadius="25"
+		  BorderThickness="0">
+        <Grid ShowGridLines="False">
+            <Grid.RowDefinitions>
+		      <RowDefinition/>
+	       </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+		      <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+        
+            <TextBox Grid.Column="1"
+			      Foreground="#CFCFCF"
+			      Background="Transparent"
+			      IsReadOnly="False"
+				 VerticalAlignment="Center"
+				 HorizontalAlignment="Right"
+				 Margin="10"
+				 FontSize="40"
+				 BorderThickness="0"/>
 
-        <TextBox Grid.Row="1"
-                 Style="{StaticResource SettingsTextBox}"/>
+            <TextBox Grid.Column="0"
+		           Foreground="#CFCFCF"
+                     Background="Transparent"
+				 VerticalAlignment="Center"
+				 HorizontalAlignment="Left"
+				 Margin="10"
+                     IsReadOnly="True"
+				 FontSize="40"
+				 BorderThickness="0"/>
 
-        <TextBox Grid.Row="0"
-                 Foreground="#CFCFCF"
-                 Background="Transparent"
-                 IsReadOnly="True"/>
-
-    </Grid>
+        </Grid>
+    </Border>
 </UserControl>

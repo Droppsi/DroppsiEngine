@@ -21,19 +21,17 @@
                    FontSize="28"
                    HorizontalAlignment="Left"
                    Margin="10, 10, 10, 20"/>
-
 	   <ScrollViewer Grid.Row="1"
-                      Margin="0"
-                      VerticalScrollBarVisibility="Auto"
-                      HorizontalAlignment="Left"
-                      VerticalAlignment="Top">
-		  <ItemsControl ItemsSource="{Binding projectSettingsTest}">
-			 <ItemsControl.ItemTemplate>
-				<DataTemplate>
-				    <local:SettingBox/>
-				</DataTemplate>
-			 </ItemsControl.ItemTemplate>
-		  </ItemsControl>
+				  BorderThickness="0"
+				  BorderBrush="Transparent">
+		  <StackPanel Orientation="Vertical"
+				    Background="Transparent">
+			 <local:SettingBox BorderThickness="0" BorderBrush="Transparent"/>
+			 <local:SettingBox BorderThickness="0" BorderBrush="Transparent"/>
+			 <local:SettingBox BorderThickness="0" BorderBrush="Transparent"/>
+			 <local:SettingBox BorderThickness="0" BorderBrush="Transparent"/>
+			 <local:SettingBox BorderThickness="0" BorderBrush="Transparent"/>
+		  </StackPanel>
 	   </ScrollViewer>
 
 	   <RadioButton Content="Create Project"

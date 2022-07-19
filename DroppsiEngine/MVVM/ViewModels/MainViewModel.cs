@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using System.Windows;
 using DroppsiEngine.Engine.Commands;
 using DroppsiEngine.Engine.Misc;
-
+using DroppsiEngine.MVVM.Views;
 
 namespace DroppsiEngine.MVVM.ViewModels
 {
@@ -51,7 +51,7 @@ namespace DroppsiEngine.MVVM.ViewModels
             });
             ExitCommand = new RelayCommand((o) =>
             {
-                Application.Current.MainWindow.Close();
+                Application.Current.Shutdown();
             });
         }
     }

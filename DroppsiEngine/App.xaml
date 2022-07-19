@@ -4,7 +4,8 @@
              xmlns:local="clr-namespace:DroppsiEngine"
              xmlns:viewModels="clr-namespace:DroppsiEngine.MVVM.ViewModels"
              xmlns:views="clr-namespace:DroppsiEngine.MVVM.Views"
-             StartupUri="MVVM/Views/MainWindow.xaml">
+             StartupUri="MVVM/Views/MainWindow.xaml"
+		   ShutdownMode="OnExplicitShutdown">
     
     <Application.Resources>
         <ResourceDictionary>
@@ -14,9 +15,8 @@
                 <ResourceDictionary Source="Themes/ProjectPreview.xaml"/>
                 <ResourceDictionary Source="Themes/SearchBox.xaml"/>
                 <ResourceDictionary Source="Themes/SaveButtons.xaml"/>
-                <ResourceDictionary Source="Themes/ClickableTextBoxes.xaml"/>
-                <ResourceDictionary Source="Themes/SettingsTextBoxes.xaml"/>
-            </ResourceDictionary.MergedDictionaries>
+			 <ResourceDictionary Source="Themes/ClickableTextBoxes.xaml"/>
+		  </ResourceDictionary.MergedDictionaries>
 
             <DataTemplate DataType="{x:Type viewModels:NewProjectViewModel}">
                 <views:NewProjectView/>

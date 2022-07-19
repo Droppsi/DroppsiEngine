@@ -3,9 +3,11 @@ using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
 using DroppsiEngine.Engine.Commands;
 using DroppsiEngine.Engine.Misc;
 using DroppsiEngine.Engine.Models;
+using DroppsiEngine.MVVM.Views;
 
 namespace DroppsiEngine.MVVM.ViewModels
 {
@@ -68,40 +70,28 @@ namespace DroppsiEngine.MVVM.ViewModels
 
         public NewProjectViewModel()
         {
+            ProjectSettings projectSettings = new()
+            {
+                Name = "DefaultName",
+                Description = "New DroppsiEngine Project",
+                PreviewPicturePath = "D:/dev/TESTS/",
+                ProjectDir = "D:/dev/TESTS/",
+                ProjectVersion = "0.0.1",
+                CreateTime = DateTime.Now,
+                LastOpened = DateTime.Now,
+            };
+            ProjectFile projectFile = new()
+            {
+                ProjectSettings = projectSettings,
+            };
             CreateProjectCommand = new RelayCommand((o) =>
             {
-                
-                ProjectSettings projectSettings = new()
-                {
-                    PreviewPicturePath = PreviewPicturePathBind,
-                    ProjectDir = ProjectDirBind,
-                    ProjectVersion = "0.0.1",
-                    Name = ProjectNameBind,
-                    Description = ProjectDescriptionBind,
-                    LastOpened = DateTime.Now,
-                    CreateTime = DateTime.Now
-                };
-                ProjectFile projectFile = new()
-                {
-                    ProjectSettings = projectSettings,
-                };
-
                 SaveProjectCommand saveProject = new();
                 saveProject.Save(projectSettings);
+                EditorWindow editor = new();
+                editor.Show();
+                
             });
-
-		  ProjectSettings projectSettings = new()
-		  {
-			 Name = "DefaultName",
-			 Description = "New DroppsiEngine Project",
-			 PreviewPicturePath = "D:/dev/",
-			 ProjectDir = "D:/dev/",
-			 ProjectVersion = "0.0.1",
-			 CreateTime = DateTime.Now,
-			 LastOpened = DateTime.Now,
-		  };           
-	   }
-
-        public ObservableCollection<string> projectSettingsTest;
+        }
     }
 }
