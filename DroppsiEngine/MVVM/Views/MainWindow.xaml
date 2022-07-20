@@ -7,7 +7,6 @@
         mc:Ignorable="d" 
         d:DesignHeight="600" d:DesignWidth="920"
         WindowStyle="None"
-	   Icon="../../Icons/Engine.ico"
         Background="Transparent"
         AllowsTransparency="True"
 	   WindowStartupLocation="CenterScreen">
@@ -16,7 +15,8 @@
         <vms:MainViewModel/>
     </Window.DataContext>
     <Border Background="#1C1C1C"
-            CornerRadius="25">
+            CornerRadius="25"
+		  Mouse.MouseDown="Border_MouseDown">
         <Grid>
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="200"/>

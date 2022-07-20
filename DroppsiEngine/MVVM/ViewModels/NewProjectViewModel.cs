@@ -80,12 +80,17 @@ namespace DroppsiEngine.MVVM.ViewModels
                 CreateTime = DateTime.Now,
                 LastOpened = DateTime.Now,
             };
-            ProjectFile projectFile = new()
-            {
-                ProjectSettings = projectSettings,
-            };
+            
+            ProjectNameViewBind = projectSettings.Name;
+            ProjectDescriptionViewBind = projectSettings.Description;
+            ProjectDirViewBind = projectSettings.ProjectDir;
+
             CreateProjectCommand = new RelayCommand((o) =>
             {
+                projectSettings.Name = ProjectNameBind;
+                projectSettings.Description = ProjectDescriptionBind;
+                projectSettings.ProjectDir = ProjectDirBind;
+
                 SaveProjectCommand saveProject = new();
                 saveProject.Save(projectSettings);
                 EditorWindow editor = new();
