@@ -7,11 +7,33 @@
         mc:Ignorable="d"
         Title="DroppsiEngine Editor" Height="450" Width="800"
 	   WindowStartupLocation="CenterScreen"
-	   WindowState="Maximized">
-    <Grid>
-	   <TextBox Text="Hello" 
-			  Foreground="Black" 
-			  HorizontalAlignment="Center" 
-			  VerticalAlignment="Center"/>
-    </Grid>
+	   WindowState="Maximized"
+	   MouseDown="Window_MouseDown"
+	   
+	   Background="#292929">
+    <DockPanel HorizontalAlignment="Stretch"
+               VerticalAlignment="Stretch">
+
+	   <Grid DockPanel.Dock="Right"
+              HorizontalAlignment="Right">
+
+		  <StackPanel Orientation="Horizontal"
+                        HorizontalAlignment="Right"
+                        VerticalAlignment="Center">
+
+			 <Button x:Name="MinimizeButton"
+                        KeyboardNavigation.IsTabStop="False"
+                        Click="MinimizeButton_Click"/>
+
+			 <Button x:Name="MaximizeButton"
+                        KeyboardNavigation.IsTabStop="False"
+                        Click="MaximizeButton_Click"/>
+
+			 <Button x:Name="CloseButton"
+                        KeyboardNavigation.IsTabStop="False"
+                        Click="CloseButton_Click"/>
+
+		  </StackPanel>
+	   </Grid>
+    </DockPanel>
 </Window>

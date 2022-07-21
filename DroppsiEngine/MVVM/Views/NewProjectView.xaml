@@ -26,15 +26,12 @@
 				  BorderBrush="Transparent">
 		  <StackPanel Orientation="Vertical"
 				    Background="Transparent">
-			 <TextBox Style="{StaticResource SettingsTextBox}" 
-					Margin="10"
-					Text="{Binding ProjectNameViewBind}"/>
-			 <TextBox Style="{StaticResource SettingsTextBox}" 
-					Margin="10"
-					Text="{Binding ProjectDescriptionViewBind}"/>
-			 <TextBox Style="{StaticResource SettingsTextBox}" 
-					Margin="10"
-					Text="{Binding ProjectDirViewBind}"/>
+			 <TextBox Margin="10"
+					Text="{Binding Path=ProjectNameViewBind, UpdateSourceTrigger=PropertyChanged}"/>
+			 <TextBox Margin="10"
+					Text="{Binding Path=ProjectDescriptionViewBind, UpdateSourceTrigger=PropertyChanged}"/>
+			 <TextBox Margin="10"
+					Text="{Binding Path=ProjectDirViewBind, UpdateSourceTrigger=PropertyChanged}"/>
 		  </StackPanel>
 	   </ScrollViewer>
 

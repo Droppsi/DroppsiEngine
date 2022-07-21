@@ -8,12 +8,41 @@ namespace DroppsiEngine.Engine.Models
 {
     public class ProjectSettings
     {
-        public string Name { get; set; }
-        public string Description { get; set; }
-        public string PreviewPicturePath { get; set; }
-        public string ProjectDir { get; set; }
-        public string ProjectVersion { get; set; }
-        public DateTime LastOpened { get; set; }
-        public DateTime CreateTime { get; set; }
+	   private string name;
+	   private string description;
+	   private string previewPicturePath;
+	   private string projectDir;
+	   private string projectVersion;
+	   private DateTime lastOpened;
+	   private DateTime createTime;
+
+	   public string Name { 
+		  get => name;
+		  set => name = value;
+	   }
+	   public string Description {
+		  get => description; 
+		  set => description = value;
+	   }
+	   public string PreviewPicturePath { 
+		  get => previewPicturePath;
+		  set => previewPicturePath = value;
+	   }
+	   public string ProjectDir {
+		  get => projectDir; 
+		  set => projectDir = value;
+	   }
+	   public string ProjectVersion {
+		  get => projectVersion; 
+		  set => projectVersion = value;
+	   }
+	   public DateTime LastOpened { 
+		  get => lastOpened; 
+		  set => lastOpened = value;
+	   }
+	   public DateTime CreateTime { 
+		  get => createTime; 
+		  set => createTime = value;
+	   }
     }
 }

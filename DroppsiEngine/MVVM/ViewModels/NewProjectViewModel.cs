@@ -70,6 +70,7 @@ namespace DroppsiEngine.MVVM.ViewModels
 
         public NewProjectViewModel()
         {
+            
             ProjectSettings projectSettings = new()
             {
                 Name = "DefaultName",
