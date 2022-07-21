@@ -9,35 +9,18 @@
                             Background="#292929"
                             Height="75">
 				    <Grid>
-					   <Rectangle StrokeThickness="1"/>
-					   <TextBox Margin="1"
-                                     Text="{TemplateBinding Text}"
-                                     BorderThickness="0"
-                                     Background="Transparent"
-                                     VerticalAlignment="Center"
-                                     Padding="5"
-                                     Foreground="#CFCFCF"
-                                     x:Name="SearchBox"/>
-					   <TextBlock IsHitTestVisible="False"
-                                       Text="Search"
-                                       VerticalAlignment="Center"
-                                       HorizontalAlignment="Left"
-                                       Margin="12, 0, 0, 0"
-                                       FontStyle="Oblique"
-                                       Foreground="DarkGray"
-                                       Grid.Column="1">
-						  <TextBlock.Style>
-							 <Style TargetType="{x:Type TextBlock}">
-								<Style.Triggers>
-								    <DataTrigger Binding="{Binding Text}" Value="">
-									   <Setter Property="Visibility" Value="Visible"/>
-
-								    </DataTrigger>
-								</Style.Triggers>
-								<Setter Property="Visibility" Value="Hidden"/>
-							 </Style>
-						  </TextBlock.Style>
-					   </TextBlock>
+					   <TextBlock Text="{TemplateBinding Text}"
+							    Foreground="#CFCFCF"
+							    HorizontalAlignment="Right"
+							    VerticalAlignment="Center"
+							    FontSize="16"
+							    Margin="10, 0, 10, 0"/>
+					   <TextBlock Text="{TemplateBinding Text}"
+							    Foreground="#CFCFCF"
+							    HorizontalAlignment="Left"
+							    VerticalAlignment="Center"
+							    FontSize="16"
+							    Margin="10, 0, 10, 0"/>
 				    </Grid>
 				</Border>
 			 </ControlTemplate>

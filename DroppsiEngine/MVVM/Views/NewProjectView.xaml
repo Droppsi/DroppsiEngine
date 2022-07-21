@@ -27,11 +27,14 @@
 		  <StackPanel Orientation="Vertical"
 				    Background="Transparent">
 			 <TextBox Margin="10"
-					Text="{Binding Path=ProjectNameViewBind, UpdateSourceTrigger=PropertyChanged}"/>
+					Text="{Binding Path=ProjectNameViewBind, UpdateSourceTrigger=PropertyChanged}"
+					Style="{StaticResource SettingsTextBox}"/>
 			 <TextBox Margin="10"
-					Text="{Binding Path=ProjectDescriptionViewBind, UpdateSourceTrigger=PropertyChanged}"/>
+					Text="{Binding Path=ProjectDescriptionViewBind, UpdateSourceTrigger=PropertyChanged}"
+					Style="{StaticResource SettingsTextBox}"/>
 			 <TextBox Margin="10"
-					Text="{Binding Path=ProjectDirViewBind, UpdateSourceTrigger=PropertyChanged}"/>
+					Text="{Binding Path=ProjectDirViewBind, UpdateSourceTrigger=PropertyChanged}"
+					Style="{StaticResource SettingsTextBox}"/>
 		  </StackPanel>
 	   </ScrollViewer>
 
