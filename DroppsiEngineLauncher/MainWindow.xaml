@@ -6,13 +6,17 @@
         xmlns:local="clr-namespace:DroppsiEngineLauncher" 
 	   xmlns:vms="clr-namespace:DroppsiEngineLauncher.ViewModels"
 	   mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="600" Width="920"
+	   WindowStyle="None"
+	   AllowsTransparency="True"
+	   Background="Transparent"
+	   WindowStartupLocation="CenterScreen">
+    
     <Window.DataContext>
 	   <vms:MainViewModel/>
     </Window.DataContext>
     <Border Background="#1C1C1C"
-            CornerRadius="25"
-		  Mouse.MouseDown="Border_MouseDown">
+            CornerRadius="25">
 	   <Grid>
 		  <Grid.ColumnDefinitions>
 			 <ColumnDefinition Width="200"/>
