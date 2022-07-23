@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using DroppsiEngineCore.Infrastructure.Logging;
 
 namespace DroppsiEngineEditor
 {
@@ -23,6 +24,8 @@ namespace DroppsiEngineEditor
 	   public MainWindow()
 	   {
 		  InitializeComponent();
+		  LoggingService loggingService = new();
+		  loggingService.Log("MainWindow Initalized");
 	   }
 
 	   private void Window_MouseDown(object sender, MouseButtonEventArgs e)

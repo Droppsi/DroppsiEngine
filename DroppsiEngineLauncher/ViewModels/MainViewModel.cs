@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using System.Windows;
 using DroppsiEngineCore.Commands;
 using DroppsiEngineCore.Misc;
-using DroppsiEngineLauncher.ViewModels;
+using DroppsiEngineCore.Infrastructure.Logging;
 
 namespace DroppsiEngineLauncher.ViewModels
 {
@@ -51,6 +51,10 @@ namespace DroppsiEngineLauncher.ViewModels
             });
             ExitCommand = new RelayCommand(() =>
             {
+
+                LoggingService loggingService = new();
+                loggingService.Log($"EngineLauncher has exited");
+                loggingService.DumpLogs();
                 Application.Current.Shutdown();
             });
         }
