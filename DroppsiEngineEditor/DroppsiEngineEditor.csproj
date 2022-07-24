@@ -5,7 +5,16 @@
     <TargetFramework>net6.0-windows</TargetFramework>
     <Nullable>enable</Nullable>
     <UseWPF>true</UseWPF>
+    <ApplicationIcon>Icons\Engine.ico</ApplicationIcon>
   </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Icons\Engine.ico" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="Icons\Engine.ico" />
+  </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\DroppsiEngineCore\DroppsiEngineCore.csproj" />

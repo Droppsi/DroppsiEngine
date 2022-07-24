@@ -363,3 +363,4 @@ MigrationBackup/
 FodyWeavers.xsd
 /upgrade-assistant.clef
 /AnalysisReport.sarif
+/.idea

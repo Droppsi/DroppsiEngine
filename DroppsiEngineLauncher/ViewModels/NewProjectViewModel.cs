@@ -94,8 +94,10 @@ namespace DroppsiEngineLauncher.ViewModels
 
                 SaveProjectCommand saveProject = new();
                 saveProject.Save(projectSettings);
-                
-
+                Window window = Application.Current.MainWindow;
+                Window editor = new DroppsiEngineEditor.MainWindow();
+                window.Close();
+                editor.Show();
             });
         }
     }
