@@ -9,12 +9,12 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Content Include="Icons\Engine.ico" />
+    <ProjectReference Include="..\DroppsiEngineCore\DroppsiEngineCore.csproj" />
+    <ProjectReference Include="..\DroppsiEngineEditor\DroppsiEngineEditor.csproj" />
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\DroppsiEngineCore\DroppsiEngineCore.csproj" />
-    <ProjectReference Include="..\DroppsiEngineEditor\DroppsiEngineEditor.csproj" />
+    <Content Include="Icons\Engine.ico" />
   </ItemGroup>
 
   <ItemGroup>

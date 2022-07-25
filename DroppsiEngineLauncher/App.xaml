@@ -17,6 +17,7 @@
 			 <ResourceDictionary Source="Themes/SaveButtons.xaml"/>
 			 <ResourceDictionary Source="Themes/ClickableTextBoxes.xaml"/>
 			 <ResourceDictionary Source="Themes/SettingsTextBox.xaml"/>
+			 <ResourceDictionary Source="Themes/SettingsSeperator.xaml"/>
 		  </ResourceDictionary.MergedDictionaries>
 
 		  <DataTemplate DataType="{x:Type viewModels:NewProjectViewModel}">

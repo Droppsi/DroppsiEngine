@@ -11,12 +11,6 @@
 				    <Grid>
 					   <TextBlock Text="{TemplateBinding Text}"
 							    Foreground="#CFCFCF"
-							    HorizontalAlignment="Right"
-							    VerticalAlignment="Center"
-							    FontSize="16"
-							    Margin="10, 0, 10, 0"/>
-					   <TextBlock Text="{TemplateBinding Text}"
-							    Foreground="#CFCFCF"
 							    HorizontalAlignment="Left"
 							    VerticalAlignment="Center"
 							    FontSize="16"

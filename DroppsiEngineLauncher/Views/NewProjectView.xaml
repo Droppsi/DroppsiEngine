@@ -26,12 +26,15 @@
 				  BorderBrush="Transparent">
 		  <StackPanel Orientation="Vertical"
 				    Background="Transparent">
+			 <Separator Style="{StaticResource SettingsSeperator}" Name="Name"/>
 			 <TextBox Margin="10"
 					Text="{Binding Path=ProjectNameViewBind, UpdateSourceTrigger=PropertyChanged}"
 					Style="{StaticResource SettingsTextBox}"/>
+			 <Separator Style="{StaticResource SettingsSeperator}" Name="Description"/>
 			 <TextBox Margin="10"
 					Text="{Binding Path=ProjectDescriptionViewBind, UpdateSourceTrigger=PropertyChanged}"
 					Style="{StaticResource SettingsTextBox}"/>
+			 <Separator Style="{StaticResource SettingsSeperator}" Name="Path"/>
 			 <TextBox Margin="10"
 					Text="{Binding Path=ProjectDirViewBind, UpdateSourceTrigger=PropertyChanged}"
 					Style="{StaticResource SettingsTextBox}"/>
