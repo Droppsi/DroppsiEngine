@@ -8,6 +8,7 @@ using DroppsiEngineCore.Interfaces;
 
 namespace DroppsiEngineCore.Infrastructure.Logging
 {
+    // TODO: Improve this later on and leave it for now
     public class LoggingService : ILogging
     {
 	   public string LogPath { get; set; }

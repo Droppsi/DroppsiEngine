@@ -19,8 +19,8 @@ namespace DroppsiEngineLauncher.ViewModels
         public NewProjectViewModel NewProjectVM { get; set; }
         public DefaultMainViewModel DefaultMainVM { get; set; }
 
-        private object _currentView;
-        public object CurrentView
+        private object? _currentView;
+        public object? CurrentView
         {
             get
             {
@@ -51,10 +51,6 @@ namespace DroppsiEngineLauncher.ViewModels
             });
             ExitCommand = new RelayCommand(() =>
             {
-
-                LoggingService loggingService = new();
-                loggingService.Log($"EngineLauncher has exited");
-                loggingService.DumpLogs();
                 Application.Current.Shutdown();
             });
         }

@@ -88,9 +88,18 @@ namespace DroppsiEngineLauncher.ViewModels
 
             CreateProjectCommand = new RelayCommand(() =>
             {
-                projectSettings.Name = ProjectNameBind;
-                projectSettings.Description = ProjectDescriptionBind;
-                projectSettings.ProjectDir = ProjectDirBind;
+                if (!string.IsNullOrEmpty(ProjectNameBind))
+			 {
+                    projectSettings.Name = ProjectNameBind;
+			 }
+                if (!string.IsNullOrEmpty(ProjectDescriptionBind))
+			 {
+                    projectSettings.Description = ProjectDescriptionBind;
+			 }
+                if (!string.IsNullOrEmpty(ProjectDirBind))
+			 {
+                    projectSettings.ProjectDir = ProjectDirBind;
+			 }
 
                 SaveProjectCommand saveProject = new();
                 saveProject.Save(projectSettings);

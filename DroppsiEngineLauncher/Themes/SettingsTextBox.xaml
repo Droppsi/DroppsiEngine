@@ -9,12 +9,14 @@
                             Background="#292929"
                             Height="75">
 				    <Grid>
-					   <TextBlock Text="{TemplateBinding Text}"
-							    Foreground="#CFCFCF"
-							    HorizontalAlignment="Left"
-							    VerticalAlignment="Center"
-							    FontSize="16"
-							    Margin="10, 0, 10, 0"/>
+					   <TextBox Text="{TemplateBinding Text}"
+							  Foreground="#CFCFCF"
+							  Background="Transparent"
+							  BorderThickness="0"
+							  HorizontalAlignment="Left"
+							  VerticalAlignment="Center"
+							  FontSize="16"
+							  Margin="10, 0, 10, 0"/>
 				    </Grid>
 				</Border>
 			 </ControlTemplate>

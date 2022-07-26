@@ -17,6 +17,10 @@
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="OpenTK.GLControl" Version="3.1.0" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\DroppsiEngineCore\DroppsiEngineCore.csproj" />
   </ItemGroup>
 

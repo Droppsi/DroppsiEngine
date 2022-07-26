@@ -19,9 +19,6 @@ namespace DroppsiEngineCore.Commands
 			 ProjectSettings = projectSettings
 		  };
 		  this.Save(projectFile);
-
-		  LoggingService loggingService = new();
-		  loggingService.Log($"Project {projectFile.ProjectSettings.Name} has been saved", LogStatus.Info);
 		  return true;
 	   }
 	   public bool Save(ProjectFile projectFile)
@@ -38,9 +35,6 @@ namespace DroppsiEngineCore.Commands
 			 using var writer = new StreamWriter(@$"{projectFile.ProjectSettings.ProjectDir}{projectFile.ProjectSettings.Name}.droppsiproject");
 			 xmlWriter.Serialize(writer, projectFile);
 		  }
-
-		  LoggingService loggingService = new();
-		  loggingService.Log($"Project {projectFile.ProjectSettings.Name} has been saved", LogStatus.Info);
 		  return true;
 	   }
     }

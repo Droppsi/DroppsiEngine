@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:DroppsiEngineLauncher" 
 	   xmlns:vms="clr-namespace:DroppsiEngineLauncher.ViewModels"
 	   mc:Ignorable="d"
-        Title="MainWindow" Height="600" Width="920"
+        Title="MainWindow" Height="735" Width="1125"
 	   WindowStyle="None"
 	   AllowsTransparency="True"
 	   Background="Transparent"

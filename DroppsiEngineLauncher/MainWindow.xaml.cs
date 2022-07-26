@@ -24,8 +24,6 @@ namespace DroppsiEngineLauncher
 	   public MainWindow()
 	   {
 		  InitializeComponent();
-		  LoggingService loggingService = new();
-		  loggingService.Log($"MainWindow has been Initalized");
 	   }
     }
 }

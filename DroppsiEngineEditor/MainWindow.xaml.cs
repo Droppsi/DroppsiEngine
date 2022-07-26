@@ -24,8 +24,6 @@ namespace DroppsiEngineEditor
 	   public MainWindow()
 	   {
 		  InitializeComponent();
-		  LoggingService loggingService = new();
-		  loggingService.Log("MainWindow Initalized");
 	   }
 
 	   private void Window_MouseDown(object sender, MouseButtonEventArgs e)
