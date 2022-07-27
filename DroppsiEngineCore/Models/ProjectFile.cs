@@ -30,5 +30,30 @@ namespace DroppsiEngineCore.Models
             deleteProjectCommand.DeleteProject(this);
             return true;
         }
+        public bool IsNullOrOnDefault()
+	   {
+            ProjectSettings DefaultSettings = new()
+            {
+                Name = "DefaultName",
+                Description = "New DroppsiEngine Project",
+                PreviewPicturePath = "D:/dev/TESTS/",
+                ProjectDir = "D:/dev/TESTS/",
+                ProjectVersion = "0.0.1",
+                CreateTime = ProjectSettings.CreateTime,
+                LastOpened = ProjectSettings.LastOpened,
+            };
+            if (ProjectSettings == null)
+            {
+                return true;
+            }
+            else if (DefaultSettings == ProjectSettings)
+		  {
+                return true;
+		  }
+            else
+		  {
+                return false;
+		  }
+	   }
     }
 }

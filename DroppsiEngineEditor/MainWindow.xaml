@@ -3,15 +3,32 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+	   xmlns:glWpfControl="clr-namespace:OpenTK.Wpf;assembly=GLWpfControl"
         xmlns:local="clr-namespace:DroppsiEngineEditor"
         mc:Ignorable="d"
-        Title="DroppsiEngine Editor" Height="450" Width="800"
+        Title="DroppsiEngine Editor" 
+	   Height="720" 
+	   Width="1280"
 	   WindowStartupLocation="CenterScreen"
 	   WindowState="Maximized"
 	   MouseDown="Window_MouseDown"
 	   Background="#292929">
-    
+
     <Grid>
+	   <Grid.ColumnDefinitions>
+		  <ColumnDefinition MinWidth="175" Width="150"/>
+		  <ColumnDefinition/>
+		  <ColumnDefinition Width="275" MinWidth="100"/>
+	   </Grid.ColumnDefinitions>
+	   <Grid.RowDefinitions>
+		  <RowDefinition MaxHeight="60"/>
+		  <RowDefinition/>
+		  <RowDefinition MinHeight="100" Height="175"/>
+	   </Grid.RowDefinitions>
+	   <glWpfControl:GLWpfControl Grid.Column="1"
+							Grid.Row="1"
+							x:Name="OpenTkControl" 
+							Render="OpenTkControl_OnRender"/>
 
     </Grid>
 </Window>

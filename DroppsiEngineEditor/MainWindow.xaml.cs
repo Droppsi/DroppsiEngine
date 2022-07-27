@@ -13,6 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using DroppsiEngineCore.Infrastructure.Logging;
+using OpenTK.Wpf;
 
 namespace DroppsiEngineEditor
 {
@@ -24,11 +25,27 @@ namespace DroppsiEngineEditor
 	   public MainWindow()
 	   {
 		  InitializeComponent();
+		  var settings = new GLWpfControlSettings
+		  {
+			 MajorVersion = 3,
+			 MinorVersion = 6
+		  };
+		  OpenTkControl.Start(settings);
 	   }
 
 	   private void Window_MouseDown(object sender, MouseButtonEventArgs e)
 	   {
 		  DragMove();
+	   }
+
+	   private void OpenTkControl_OnRender(TimeSpan delta)
+	   {
+		  
+	   }
+
+	   private void RedrawButton_OnClick(object sender, RoutedEventArgs e)
+	   {
+		  
 	   }
     }
 }
