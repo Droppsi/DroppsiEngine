@@ -25,4 +25,19 @@
     <ProjectReference Include="..\DroppsiEngineCore\DroppsiEngineCore.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Page Update="Themes\MenuButtons.xaml">
+      <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Themes\MenuButtonsBig.xaml">
+      <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Dialogs\" />
+  </ItemGroup>
+
 </Project>

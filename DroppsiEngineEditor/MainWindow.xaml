@@ -12,23 +12,57 @@
 	   WindowStartupLocation="CenterScreen"
 	   WindowState="Maximized"
 	   MouseDown="Window_MouseDown"
-	   Background="#292929">
+	   Background="#1C1C1C">
 
     <Grid>
-	   <Grid.ColumnDefinitions>
-		  <ColumnDefinition MinWidth="175" Width="150"/>
-		  <ColumnDefinition/>
-		  <ColumnDefinition Width="275" MinWidth="100"/>
-	   </Grid.ColumnDefinitions>
 	   <Grid.RowDefinitions>
 		  <RowDefinition MaxHeight="60"/>
 		  <RowDefinition/>
-		  <RowDefinition MinHeight="100" Height="175"/>
 	   </Grid.RowDefinitions>
-	   <!--<glWpfControl:GLWpfControl Grid.Column="1"
+
+	   <DockPanel Grid.Row="0">
+		  <StackPanel Orientation="Horizontal">
+			 
+			 <RadioButton Content="File"
+					    Style="{StaticResource MenuButtons}"
+					    Width="75"
+					    Height="50"
+					    HorizontalAlignment="Left"
+					    Margin="5"
+					    Command="{Binding OpenFileMenu}"/>
+			 
+			 <RadioButton Content="Tools"
+					    Style="{StaticResource MenuButtons}"
+					    Width="75"
+					    Height="50"
+					    HorizontalAlignment="Left"
+					    Margin="5"/>
+			 
+			 <RadioButton Content="Help"
+					    Style="{StaticResource MenuButtons}"
+					    Width="75"
+					    Height="50"
+					    HorizontalAlignment="Left"
+					    Margin="5"/> 
+			 
+		  </StackPanel>
+	   </DockPanel>
+	   
+	   <Grid Grid.Row="1">
+		  <Grid.ColumnDefinitions>
+			 <ColumnDefinition MinWidth="175" Width="150"/>
+			 <ColumnDefinition/>
+			 <ColumnDefinition Width="275" MinWidth="100"/>
+		  </Grid.ColumnDefinitions>
+		  <Grid.RowDefinitions>
+			 <RowDefinition/>
+			 <RowDefinition MinHeight="100" Height="175"/>
+		  </Grid.RowDefinitions>
+		  <!--<glWpfControl:GLWpfControl Grid.Column="1"
 							Grid.Row="1"
 							x:Name="OpenTkControl" 
 							Render="OpenTkControl_OnRender"/>-->
 
+	   </Grid>
     </Grid>
 </Window>
