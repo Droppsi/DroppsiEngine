@@ -28,6 +28,7 @@
 			 <RowDefinition/>
 		  </Grid.RowDefinitions>
 		  <RadioButton Content="DroppsiEngine"
+					Foreground="#CFCFCF"
                          Style="{StaticResource ClickableTextBox}"
                          Margin="19,0,0,0"
                          FontSize="28"
@@ -40,7 +41,7 @@
                          VerticalAlignment="Bottom"
                          Height="50"
                          FontSize="18"
-                         Foreground="White"
+                         Foreground="#CFCFCF"
                          Margin="12, 12, 12, 12"
                          VerticalContentAlignment="Bottom"
                          Style="{StaticResource MenuButtons}"
@@ -52,10 +53,18 @@
                          Height="35"
                          Foreground="White"/>
 
+			 <RadioButton Content="Start Without Code"
+					    Height="50"
+					    FontSize="18"
+					    Foreground="#CFCFCF"
+					    Margin="20, 12, 12, 0"
+					    Style="{StaticResource MenuButtons}"
+					    Command="{Binding ContinueWithoutCodeVMCommand}"/>
+
 			 <RadioButton Content="New Project"
                              Height="50"
                              FontSize="18"
-                             Foreground="White"
+                             Foreground="#CFCFCF"
                              Margin="19, 12, 12, 0"
                              Style="{StaticResource MenuButtons}"
                              Command="{Binding NewProjectVMCommand}"/>

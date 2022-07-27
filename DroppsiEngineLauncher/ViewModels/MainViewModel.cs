@@ -15,6 +15,7 @@ namespace DroppsiEngineLauncher.ViewModels
         public RelayCommand ExitCommand { get; set; }
         public RelayCommand DefaultMainVMCommand { get; set; }
         public RelayCommand NewProjectVMCommand { get; set; }
+        public RelayCommand ContinueWithoutCodeVMCommand { get; set; }
 
         public NewProjectViewModel NewProjectVM { get; set; }
         public DefaultMainViewModel DefaultMainVM { get; set; }
@@ -52,6 +53,13 @@ namespace DroppsiEngineLauncher.ViewModels
             ExitCommand = new RelayCommand(() =>
             {
                 Application.Current.Shutdown();
+            });
+            ContinueWithoutCodeVMCommand = new RelayCommand(() =>
+            {
+                Window window = Application.Current.MainWindow;
+                Window editor = new DroppsiEngineEditor.MainWindow();
+                window.Close();
+                editor.Show();
             });
         }
     }
