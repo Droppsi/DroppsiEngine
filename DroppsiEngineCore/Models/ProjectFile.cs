@@ -4,15 +4,21 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using DroppsiEngineCore.Commands;
+using DroppsiEngineCore.ScriptingEngine;
 
 namespace DroppsiEngineCore.Models
 {
     [Serializable]
     public class ProjectFile
     {
-
         public ProjectSettings ProjectSettings { get; set; }
+        public List<Entity> ProjectEntities { get; set; }
 
+	   public ProjectFile()
+	   {
+            ProjectEntities = new List<Entity> { };
+            ProjectSettings = new ProjectSettings();
+	   }
 
         public bool SaveProject()
 	   {
@@ -24,12 +30,14 @@ namespace DroppsiEngineCore.Models
             return false;
 
         }
+
         public bool DeleteProject()
         {
             DeleteProjectCommand deleteProjectCommand = new();
             deleteProjectCommand.DeleteProject(this);
             return true;
         }
+
         public bool IsNullOrOnDefault()
 	   {
             ProjectSettings DefaultSettings = new()

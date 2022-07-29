@@ -36,8 +36,4 @@
     </Page>
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Dialogs\" />
-  </ItemGroup>
-
 </Project>

@@ -13,8 +13,6 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using DroppsiEngineCore.Commands;
-using DroppsiEngineCore.Infrastructure.Logging;
-using OpenTK.Wpf;
 
 namespace DroppsiEngineEditor
 {
@@ -23,15 +21,9 @@ namespace DroppsiEngineEditor
     /// </summary>
     public partial class MainWindow : Window
     {
-	   public RelayCommand OpenFileMenu { get; set; }
 	   public MainWindow()
 	   {
 		  InitializeComponent();
-
-		  OpenFileMenu = new RelayCommand(() =>
-		  {
-
-		  });
 	   }
 
 	   private void Window_MouseDown(object sender, MouseButtonEventArgs e)
