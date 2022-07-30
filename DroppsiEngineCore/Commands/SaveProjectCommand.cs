@@ -6,7 +6,6 @@ using System.Threading.Tasks;
 using System.Xml.Serialization;
 using DroppsiEngineCore.Enums;
 using DroppsiEngineCore.Models;
-using DroppsiEngineCore.Infrastructure.Logging;
 
 namespace DroppsiEngineCore.Commands
 {

@@ -5,7 +5,6 @@ using System.Text;
 using System.Threading.Tasks;
 using DroppsiEngineCore.Models;
 using DroppsiEngineCore.Enums;
-using DroppsiEngineCore.Infrastructure.Logging;
 
 namespace DroppsiEngineCore.Commands
 {

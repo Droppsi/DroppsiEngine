@@ -21,7 +21,14 @@ namespace DroppsiEngineCore.Commands
 		  if (reader is not null)
 		  {
 			 ProjectFile? projectFile = xmlSerializer.Deserialize(reader) as ProjectFile;
-			 return projectFile;
+			 if (projectFile != null)
+			 { 
+				return projectFile; 
+			 }
+			 else
+			 {
+				return new ProjectFile();
+			 }
 		  }
 		  else
 		  {

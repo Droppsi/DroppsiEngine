@@ -6,7 +6,6 @@ using System.Threading.Tasks;
 using System.Windows;
 using DroppsiEngineCore.Commands;
 using DroppsiEngineCore.Misc;
-using DroppsiEngineCore.Infrastructure.Logging;
 
 namespace DroppsiEngineLauncher.ViewModels
 {

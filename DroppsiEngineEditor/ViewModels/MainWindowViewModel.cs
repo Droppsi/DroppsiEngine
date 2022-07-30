@@ -16,7 +16,6 @@ namespace DroppsiEngineEditor.ViewModels
     {
 	   public RelayCommand OpenProjectCommand { get; set; }
 	   public TreeView ObjectExplorer { get; set; }
-	   internal ProjectFile ProjectFile { get; set; }
 	   public ObservableCollection<MenuItem> Items { get; set; }
 	   public MainWindowViewModel()
 	   {
@@ -46,7 +45,6 @@ namespace DroppsiEngineEditor.ViewModels
 				string fileName = File.ReadAllText(openFileDialog.FileName);
 				LoadProjectCommand loadProject = new();
 				ProjectFile projectFile = loadProject.Load(fileName);
-				ProjectFile = projectFile;
 				foreach (var x in projectFile.ProjectEntities)
 				{
 				    // TODO:

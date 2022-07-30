@@ -48,7 +48,7 @@
 			 <RowDefinition MinHeight="100" Height="175"/>
 		  </Grid.RowDefinitions>
 		  <!--<glWpfControl:GLWpfControl Grid.Column="1"
-							Grid.Row="1"
+							Grid.Row="0"
 							x:Name="OpenTkControl" 
 							Render="OpenTkControl_OnRender"/>-->
 		  <TreeView Grid.Row="0"

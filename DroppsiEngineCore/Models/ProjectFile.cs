@@ -64,4 +64,25 @@ namespace DroppsiEngineCore.Models
 		  }
 	   }
     }
+    public class ProjectSettings
+    {
+	   public string Name { get; set; }
+	   public string Description { get; set; }
+	   public string PreviewPicturePath { get; set; }
+	   public string ProjectDir { get; set; }
+	   public string ProjectVersion { get; set; }
+	   public DateTime LastOpened { get; set; }
+	   public DateTime CreateTime { get; set; }
+
+	   public ProjectSettings()
+	   {
+            Name = "DefaultName";
+            Description = "New DroppsiEngine Project";
+            PreviewPicturePath = "D:/dev/TESTS/";
+            ProjectDir = "D:/dev/TESTS/";
+            ProjectVersion = "0.0.1";
+            CreateTime = DateTime.Now;
+            LastOpened = DateTime.Now;
+	   }
+    }
 }
