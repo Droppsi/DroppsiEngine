@@ -12,7 +12,7 @@ namespace DroppsiEngineCore.Infrastructure.Rendering
     {
 	   public void Bind()
 	   {
-		  throw new NotImplementedException();
+		  
 	   }
 
 	   public void Delete()

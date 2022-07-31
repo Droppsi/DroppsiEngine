@@ -37,6 +37,11 @@
 						Foreground="Black"
 						Command="{Binding CloseProjectCommand}"/>
 			 </MenuItem>
+			 <MenuItem Header="Game">
+				<MenuItem Header="Start Game Outside Viewport"
+						Foreground="Black"
+						Command="{Binding StartGameCommand}"/>
+			 </MenuItem>
 		  </Menu>
 	   </DockPanel>
 	   

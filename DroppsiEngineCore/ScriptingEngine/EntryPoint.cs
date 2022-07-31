@@ -11,29 +11,35 @@ namespace DroppsiEngineCore.ScriptingEngine
 {
     public class EntryPoint
     {
-	   public Vector2D? GWSize { get; set; }
-	   private GameWindow GWindow { get; set; }
+	   public GameWindow GWindow { get; set; }
 	   private GameWindowSettings GWSettings { get; set; }
 	   private NativeWindowSettings NativeWindowSettings { get; set; }
 	   public EntryPoint()
 	   {
 		  this.GWSettings = GameWindowSettings.Default;
 		  this.NativeWindowSettings = NativeWindowSettings.Default;
-		  this.GWindow = new(GWSettings, NativeWindowSettings)
+		  this.NativeWindowSettings = new()
 		  {
-			 Size = new Vector2D(500, 500)
+			 Title = "DroppsiEngine Default Game",
+			 Size = new Vector2D(500, 750),
 		  };
+		  this.GWindow = new(GWSettings, NativeWindowSettings)
+		  {};
 	   }
 
 	   public EntryPoint(Vector2D vector)
 	   {
 		  this.GWSettings = GameWindowSettings.Default;
-		  this.NativeWindowSettings = NativeWindowSettings.Default;
-		  this.GWindow = new(GWSettings, NativeWindowSettings)
+		  this.NativeWindowSettings = new()
 		  {
-			 Size = vector
+			 Title = "DroppsiEngine Default Game",
+			 Size = vector,
 		  };
+		  this.GWindow = new(GWSettings, NativeWindowSettings);
 	   }
 
+	   public void Run()
+	   {
+	   }
     }
 }

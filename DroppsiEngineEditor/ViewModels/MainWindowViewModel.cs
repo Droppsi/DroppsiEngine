@@ -9,6 +9,8 @@ using System.Threading.Tasks;
 using System.Windows.Controls;
 using DroppsiEngineCore.Commands;
 using DroppsiEngineCore.Models;
+using DroppsiEngineCore.ScriptingEngine;
+using DroppsiEngineCore.Helpers;
 
 namespace DroppsiEngineEditor.ViewModels
 {
@@ -16,6 +18,7 @@ namespace DroppsiEngineEditor.ViewModels
     {
 	   public RelayCommand OpenProjectCommand { get; set; }
 	   public RelayCommand CloseProjectCommand { get; set; }
+	   public RelayCommand StartGameCommand { get; set; }
 	   public TreeView ObjectExplorer { get; set; }
 	   public MainWindowViewModel()
 	   {
@@ -57,6 +60,14 @@ namespace DroppsiEngineEditor.ViewModels
 		  {
 			 // TODO:
 			 // add functionality to close projects (saving it) and return to a default view
+		  });
+
+		  StartGameCommand = new RelayCommand(() =>
+		  {
+			 EntryPoint gameWindow = new( 
+				new Vector2D(500, 850)
+				);
+			 gameWindow.GWindow.Run();
 		  });
 	   }
     }
