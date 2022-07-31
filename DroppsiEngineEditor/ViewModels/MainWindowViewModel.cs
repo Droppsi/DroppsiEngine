@@ -15,8 +15,8 @@ namespace DroppsiEngineEditor.ViewModels
     public class MainWindowViewModel
     {
 	   public RelayCommand OpenProjectCommand { get; set; }
+	   public RelayCommand CloseProjectCommand { get; set; }
 	   public TreeView ObjectExplorer { get; set; }
-	   public ObservableCollection<MenuItem> Items { get; set; }
 	   public MainWindowViewModel()
 	   {
 		  ObjectExplorer = new TreeView();
@@ -51,6 +51,12 @@ namespace DroppsiEngineEditor.ViewModels
 				    // add functionality to add all objects and neasted objects from <ProjectFile> to TreeView and TreeViewItem objects as childItems 
 				}
 			 }
+		  });
+
+		  CloseProjectCommand = new RelayCommand(() =>
+		  {
+			 // TODO:
+			 // add functionality to close projects (saving it) and return to a default view
 		  });
 	   }
     }

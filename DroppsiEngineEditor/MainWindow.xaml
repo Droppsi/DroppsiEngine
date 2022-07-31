@@ -33,11 +33,15 @@
 				<MenuItem Header="Open Project"
 						Foreground="Black"
 						Command="{Binding OpenProjectCommand}"/>
+				<MenuItem Header="Close Project"
+						Foreground="Black"
+						Command="{Binding CloseProjectCommand}"/>
 			 </MenuItem>
 		  </Menu>
 	   </DockPanel>
 	   
-	   <Grid Grid.Row="1">
+	   <Grid Grid.Row="1"
+		    Margin="5, 0, 5, 5">
 		  <Grid.ColumnDefinitions>
 			 <ColumnDefinition MinWidth="175" Width="150"/>
 			 <ColumnDefinition/>
@@ -54,12 +58,8 @@
 		  <TreeView Grid.Row="0"
 				  Grid.Column="2"
 				  Background="#292929"
-				  Name="ObjectExplorer">
-			 <TreeView.ItemTemplate>
-				<HierarchicalDataTemplate ItemsSource="{Binding }">
-				    <TextBlock Text="{Binding Title}" />
-				</HierarchicalDataTemplate>
-			 </TreeView.ItemTemplate>
+				  Name="ObjectExplorer"
+				  ItemsSource="{Binding ObjectExplorer}">
 		  </TreeView>
 
 	   </Grid>

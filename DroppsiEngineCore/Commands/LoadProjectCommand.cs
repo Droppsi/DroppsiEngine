@@ -20,10 +20,9 @@ namespace DroppsiEngineCore.Commands
 		  using var reader = new StreamReader(filePath);
 		  if (reader is not null)
 		  {
-			 ProjectFile? projectFile = xmlSerializer.Deserialize(reader) as ProjectFile;
-			 if (projectFile != null)
-			 { 
-				return projectFile; 
+			 if (xmlSerializer.Deserialize(reader) is ProjectFile projectFile)
+			 {
+				return projectFile;
 			 }
 			 else
 			 {
