@@ -7,7 +7,7 @@ using OpenTK.Mathematics;
 
 namespace DroppsiEngineCore.Helpers
 {
-    public class Vector2D
+    public struct Vector2D
     {
 	   public float X { get; set; }
 	   public float Y { get; set; }

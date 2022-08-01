@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DroppsiEngineCore.Infrastructure.Rendering
+namespace DroppsiEngineCore.Models
 {
     public class RenderOptions
     {

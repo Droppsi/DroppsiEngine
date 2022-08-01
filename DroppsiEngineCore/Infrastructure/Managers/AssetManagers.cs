@@ -3,9 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using DroppsiEngineCore.Infrastructure.Rendering;
 using DroppsiEngineCore.Models;
 
-namespace DroppsiEngineCore.Infrastructure.Rendering
+namespace DroppsiEngineCore.Infrastructure.Managers
 {
     public class AssetManager<T> where T : Asset
     {
@@ -24,7 +25,7 @@ namespace DroppsiEngineCore.Infrastructure.Rendering
 	   }
     }
 
-    class VertexArrayManager : AssetManager<VertexArray> 
+    class VertexArrayManager : AssetManager<VertexArray>
     {
 
     }
