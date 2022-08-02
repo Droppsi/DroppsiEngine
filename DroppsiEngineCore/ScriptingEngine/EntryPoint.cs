@@ -12,6 +12,7 @@ namespace DroppsiEngineCore.ScriptingEngine
     public class EntryPoint
     {
 	   public GameWindow GWindow { get; set; }
+	   public List<GameComponent>? GameComponents { get; set; }
 	   private GameWindowSettings GWSettings { get; set; }
 	   private NativeWindowSettings NativeWindowSettings { get; set; }
 	   public EntryPoint()
@@ -36,10 +37,21 @@ namespace DroppsiEngineCore.ScriptingEngine
 			 Size = vector,
 		  };
 		  this.GWindow = new(GWSettings, NativeWindowSettings);
+		  this.GameComponents = new List<GameComponent>();
 	   }
 
 	   public void Run()
 	   {
+	   }
+
+	   public void AddGameComponent(GameComponent component)
+	   {
+		  if (this.GameComponents.Contains(component))
+		  {
+			 throw new EngineErrors($"GameComponent with ID {component.Entity.Id} already exists");
+		  }
+		  GameComponents.Add(component);
+		  component.Update();
 	   }
     }
 }
