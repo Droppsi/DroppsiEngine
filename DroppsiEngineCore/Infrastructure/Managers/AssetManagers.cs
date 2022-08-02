@@ -29,4 +29,9 @@ namespace DroppsiEngineCore.Infrastructure.Managers
     {
 
     }
+
+    class TextureManager : AssetManager<Texture>
+    {
+
+    }
 }
