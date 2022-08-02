@@ -9,8 +9,18 @@ namespace DroppsiEngineCore.Models
     public class Entity
     {
 	   public Guid Id { get; set; }
-	   public RenderOptions? RenderOptions { get; set; }
-	   public List<Entity>? SubEntities { get; set; }
-	   public Transform Transform { get; set; }
+	   public List<GameComponent> GameComponents { get; set; }
+
+	   public GameComponent GetComponent<T>() where T : GameComponent
+	   {
+		  foreach (T gameComponent in GameComponents)
+		  {
+			 if (gameComponent.GetType() == typeof(T))
+			 {
+				return (T)gameComponent;
+			 }
+		  }
+		  return null;
+	   }
     }
 }
